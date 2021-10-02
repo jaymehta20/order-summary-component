@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+/* !RESETS */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.3;
+}
+
+button {
+  font-family: inherit;
+  font-weight: 700;
+  letter-spacing: 1px;
+  display: block;
+  cursor: pointer;
+  border: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+li,
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+body {
+  line-height: 1.6;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  background-image: url(images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: hsl(225, 100%, 94%);
+}
+
+/* !TYPOGRAPHY */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+/* !UTILITIES */
+
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.flow-content > * + * {
+  margin-top: 1rem;
+}
+
+.flow-content--med > * + * {
+  margin-top: 1.5rem;
+}
+
+.flow-content--large > * + * {
+  margin-top: 3rem;
+}
+
+/* !MAIN */
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  max-width: 400px;
+  padding-bottom: 2rem;
+  border-radius: 20px;
+}
+
+.card h1 {
+  margin-top: 3rem;
+}
+
+.card img {
+  border-radius: 20px 20px 0 0;
+}
+
+.card p {
+  text-align: center;
+  color: hsl(224, 23%, 55%);
+  max-width: 28ch;
+}
+
+.pricing-card {
+  display: flex;
+  gap: 5rem;
+  background-color: hsl(225, 100%, 98%);
+  max-width: 100%;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+}
+
+.pricing-card--content p {
+  text-align: left;
+}
+
+.pricing-cta {
+  background: transparent;
+  color: hsl(245, 75%, 52%);
+  display: flex;
+  align-self: center;
+  margin-top: 0;
+  text-decoration: underline;
+}
+
+.pricing-cta:hover {
+  opacity: 0.75;
+}
+
+.primary-btn {
+  margin-top: 2rem;
+  background-color: hsl(245, 75%, 52%);
+  padding: 15px 100px;
+  border-radius: 8px;
+  box-shadow: rgba(56, 41, 224, 0.5) 0px 25px 50px -12px;
+  color: #fff;
+}
+
+.primary-btn:hover {
+  opacity: 0.75;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  padding: 15px 100px;
+  border-radius: 8px;
+  color: hsl(224, 23%, 55%);
+}
+
+.secondary-btn:hover {
+  color: #000;
+}
+
+.attribution {
+  text-align: center;
+}
+
+@media (max-width: 465px) {
+  .primary-btn,
+  .secondary-btn {
+    padding: 15px 50px;
+  }
+
+  .pricing-card {
+    gap: 2rem;
+  }
+
+  .pricing-card h3,
+  p,
+  button {
+    font-size: 0.75rem;
+  }
+}
